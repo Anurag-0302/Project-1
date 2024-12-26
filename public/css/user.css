@@ -1,0 +1,43 @@
+.user-profile{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+#name, #number, #email, #password{
+    margin: 0px;
+}
+
+.buttons{
+    margin: 20px 0 50px;
+}
+
+.btn{
+    padding: 10px 30px;
+    text-transform: capitalize;
+    color: #fff;
+    background: #383838;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.user-btn{
+    height: 50px;
+    width: 300px;
+    padding: 10px 30px;
+    size: 24px;
+    text-transform: capitalize;
+    color: #fff;
+    background: #383838;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+}

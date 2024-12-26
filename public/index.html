@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing - Best Apparels Online Store</title>
+    <link rel="stylesheet" href="css/home.css">
+
+</head>
+<body>
+    
+    <nav class="navbar"></nav>
+
+    <!--Header Section-->
+    <header class="header-section">
+        <div class="contet">
+            <img src="img/light-logo.png" class="logo" alt="">
+            <p class="sub-heading">best fashion collection of all time</p>
+        </div>
+    </header>
+
+    <section id="men-tshirt-products"></section>
+
+    <!--Collection -->
+    <section class="collection-container">
+        <a href="#" class="collection">
+            <img src="img/women-collection.png" alt="">
+            <p class="collection-titel">women <br> apperals </p>
+        </a>
+        <a href="#" class="collection">
+            <img src="img/men-collection.png" alt="">
+            <p class="collection-titel">men <br> apperals </p>
+        </a>
+        <a href="#" class="collection">
+            <img src="img/accessories-collection.png" alt="">
+            <p class="collection-titel">accessories</p>
+        </a>
+    </section>
+
+    <section id="men-tshirt-products-2"></section>
+
+    <!--Footer-->
+    <footer></footer>
+
+    <script src="jss/na.js"></script>
+    <script src="jss/home.js"></script>
+    <script src="jss/footer.js"></script>
+
+    <script>
+    /*
+        getProducts('Men').then(data =>{
+            console.log(data);
+            createProductSlider(data, '#men-tshirt-products', 'Men T-shirt')
+        })
+        getProducts('Men').then(data => createProductSlider(data, '#men-tshirt-products-2', 'Men T-shirt'))
+    */
+
+    // Usage in your HTML script section
+    getProducts('tshirt').then(data => {  // Debugging output
+        createProductSlider(data, '#men-tshirt-products', 'Men T-shirt');
+        createProductSlider(data, '#men-tshirt-products-2', 'Men T-shirt');
+    })
+</script>
+
+</body>
+</html>

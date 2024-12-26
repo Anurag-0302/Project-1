@@ -1,0 +1,23 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "aws-sdk": "^2.1645.0",
+    "bcrypt": "^5.1.1",
+    
+    "body": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express.js": "^1.0.0",
+    "firebase-admin": "^12.1.1",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4",
+    "parser": "^0.1.4"
+  }
+}

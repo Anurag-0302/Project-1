@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing : Create Account</title>
+
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <img src="img/loader.gif" class="loader">
+
+    <div class="alert-box">
+        <img src="img/error.png" class="alert-img" alt="">
+        <p class="alert-msg">Error message</p>
+    </div>
+
+    <div class="container">
+        <img src="img/dark-logo.png" alt="" class="logo">
+
+                <input type="text" autocomplete="off" id="name" placeholder="name" required>
+                <input type="email" autocomplete="off" id="email" placeholder="email" required>
+                <input type="password" autocomplete="off" id="password" placeholder="password" required>
+                <input type="text" maxlength="10" autocomplete="off" id="number" placeholder="number" required>
+
+            <input type="checkbox" class="checkbox" checked id="terms-and-conditions" required>
+            <label for="terms-and-conditions">agree to our <a href="#">terms terms and conditions</a></label>
+            <br>
+            <input type="checkbox" class="checkbox" id="notification">
+            <label for="notification">recieve upcoming offers and events mails</b></label>
+            <button class="submit-btn">create account</button>
+            <a href="/login" class="link">already have an account? Login Here</a>
+    </div>
+        <script src="jss/token.js"></script>
+        <script src="jss/form.js"></script>
+</body>
+
+</html>
