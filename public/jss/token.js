@@ -1,5 +1,4 @@
-let char = `123abcde.fmnopqlABCDE@FJKLMNOPQRSTUVWXYZ456789stuvwxyz0!#$%&ijkrgh'*+-/
-=?^_${'`'}{|}~`;
+let char = `123abcde.fmnopqlABCDE@FJKLMNOPQRSTUVWXYZ456789stuvwxyz0!#$%&ijkrgh'*+-/=?^_${'`'}{|}~`;
 
 const generateToken = (key) => {
     let token = '';
@@ -28,7 +27,7 @@ const compareToken = (token, key) => {
 
 
 //send data information
-const sendData = (path, data) => {
+/*const sendData = (path, data) => {
     fetch(path, {
         method: 'post',
         headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -37,7 +36,32 @@ const sendData = (path, data) => {
         .then(response => {
             processData(response);
         })
-}
+}*/
+const sendData = (path, data) => {
+    fetch(path, {
+        method: 'POST',
+        headers: new Headers({ 'Content-Type': 'application/json' }),
+        body: JSON.stringify(data)
+    })
+    .then((res) => {
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+    })
+    .then(response => {
+        processData(response);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+        // Optionally, you can handle specific error cases
+        if (error.message === 'Failed to fetch') {
+            console.error('Network error or server is unreachable');
+        }
+    });
+};
+
+
 
 const processData = (data) => {
     loader.style.display = null;
